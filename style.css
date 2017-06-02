@@ -15,9 +15,24 @@
 
 }
 
+html {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: var(--color-bg);
+    background-repeat:no-repeat;
+    background: -webkit-linear-gradient( to bottom right, var(--color-bg), var(--color1));
+    background: -moz-linear-gradient( to bottom right, var(--color-bg), var(--color1));
+    background: -ms-linear-gradient( to bottom right, var(--color-bg), var(--color1));
+    background: -o-linear-gradient( to bottom right, var(--color-bg), var(--color1));
+    background: linear-gradient( to bottom right, var(--color-bg), var(--color1));
+}
+
 body {
-    background-color: var(--color-bg);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    height:
 }
 
 h1 {
