@@ -7,14 +7,19 @@
 */
 
 :root {
-    --color1: rgba(229,166,142,1);
-    --color2: rgba(229,153,170,1);
-    --color3: rgba(214,126,192,1);
-    --color4: rgba(156,98,188,1);
-    --color5: rgba(20,11,145,1);
+    --color1: rgba( 43, 76,111,1);
+    --color-bg: rgba(153,176,201,1);
+    --color3: rgba( 85,117,149,1);
+    --color4: rgba( 14, 43, 72,1);
+    --color-title: rgba(  2, 18, 34,1);
+
 }
 
 body {
-    background-color: var(--color1);
+    background-color: var(--color-bg);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1 {
+    color: var(--color-title);
 }
