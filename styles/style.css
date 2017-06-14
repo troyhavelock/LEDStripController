@@ -78,9 +78,36 @@ hr {
     margin-left: 50px;
 }
 
+#menuBar {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
 #main {
     transition: margin-left .5s;
     padding: 16px;
+    padding-top: 0;
+}
+
+#solidColor {
+    display: none;
+    transition: margin-left .5s;
+    padding: 16px;
+    padding-top: 0;
+}
+
+#audio {
+    display: none;
+    transition: margin-left .5s;
+    padding: 16px;
+    padding-top: 0;
+}
+
+#fadeAndFlash {
+    display: none;
+    transition: margin-left .5s;
+    padding: 16px;
+    padding-top: 0;
 }
 
 @media screen and (max-height: 450px) {
