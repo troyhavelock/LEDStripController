@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    </head>
+    <body>
+
+        <div id="UISidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closeNavButton" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" onclick="showPage('main')">Home</a>
+            <a href="javascript:void(0)" onclick="showPage('solidColor')">Solid Color</a>
+            <a href="javascript:void(0)" onclick="showPage('audio')">Audio</a>
+            <a href="javascript:void(0)" onclick="showPage('fadeAndFlash')">Fade and Flash</a>
+        </div>
+
+        <div  id="menuBar">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <hr>
+        </div>
+
+        <div id="main">
+            <h2>LED Strip Controller</h2>
+        </div>
+
+        <div id="solidColor">
+            <h2>Solid Color</h2>
+        </div>
+
+        <div id="audio">
+            <h2>Audio</h2>
+        </div>
+
+        <div id="fadeAndFlash">
+            <h2>Fade and Flash</h2>
+        </div>
+
+
+        <script src="scripts/UIController.js"></script>
+
+    </body>
+</html>
