@@ -25,14 +25,63 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    height:
+    font-family: "Lato", sans-serif;
 }
 
 h1 {
     color: var(--color-title);
 }
 
+/* This is the class for the side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* This is the css for the anchor tag in the navigation menu class */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* This is the css for the anchor tag for when a mouse hovers over an anchor
+    in the navigation menu class*/
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* This is the class for the button to close the menu */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*
 .pane {
     height: 500px;
     opacity: 0.4;
@@ -42,4 +91,4 @@ h1 {
     background: -ms-linear-gradient( to top right, lightgrey, grey);
     background: -o-linear-gradient( to top right, lightgrey, grey);
     background: linear-gradient( to top right, lightgrey, grey);
-}
+}*/
