@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/farbtastic.css" />
+        <script type="text/javascript" src="scripts/UIController.js"></script>
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/farbtastic.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#colorpicker').farbtastic('#color');
+            });
+        </script>
     </head>
     <body>
 
@@ -13,7 +22,7 @@
             <a href="javascript:void(0)" onclick="showPage('fadeAndFlash')">Fade and Flash</a>
         </div>
 
-        <div  id="menuBar">
+        <div id="menuBar">
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
             <hr>
         </div>
@@ -55,6 +64,13 @@
 
         <div id="solidColor">
             <h2>Solid Color</h2>
+            <form>
+                <input type="text" id="color" name="color" />
+            </form>
+            <br>
+            <div id="colorpicker"></div>
+            <br>
+            <button onclick="printColorValue($('#colorpicker')[0].farbtastic.color)">Set</button>
         </div>
 
         <div id="audio">
@@ -64,9 +80,6 @@
         <div id="fadeAndFlash">
             <h2>Fade and Flash</h2>
         </div>
-
-
-        <script src="scripts/UIController.js"></script>
 
     </body>
 </html>
