@@ -117,6 +117,7 @@ void loop() {
     case AUDIO:
       if (AUDIO_EQUIPED) {
         audioMode();
+        checkModeUpdate();
       }
       break;
 
@@ -210,14 +211,19 @@ bool checkModeUpdate() {
    * SINGLE r g b
    */
   if (Serial.available() > 0) {
-    String input = Serial.readString();
-    Serial.print(input);
-    if (input.equals("AUDIO")) {
+    String input = Serial.readStringUntil('\n');
+    Serial.println(input);
+    Serial.println(input.equals("AUDIO"));
+    Serial.println(input.equals("AUDIO\n"));
+    Serial.println(input.equals("AUDIO\r"));
+
+    if (input.equals("AUDIO\r") == true) {
       currentMode = AUDIO;
-      Serial.print("Audio Mode Set");
+      Serial.println("Audio Mode Set");
     }
   }
   else {
+    //Serial.println("Serial Not Available");
     return false;
   }
 }
