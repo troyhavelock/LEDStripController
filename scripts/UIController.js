@@ -24,3 +24,8 @@ function showPage(pageName) {
     currentPage = pageName;
     closeNav();
 }
+
+function printColorValue(color) {
+    console.log(color);
+    console.log(typeof(color));
+}
