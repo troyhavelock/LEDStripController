@@ -27,17 +27,45 @@ int sensorValue = 0;
 
 /*-- Logic Information --*/
 
-#define FADE_SPEED    20
-#define AUDIO_EQUIPED  true
+#define FADE_SPEED      20
+#define AUDIO_EQUIPED   true
 
 enum LED_MODE {
+  OFF,
   SINGLE,
   AUDIO,
   FADE3,
-  FADE7
+  FADE7,
+  FLASH3,
+  FLASH7
 };
 
 LED_MODE currentMode;
+
+/*-- Event Information --*/
+
+/*  Event Name      |     Data
+ *  -------------------------------------
+ *  ON              |     light name
+ *  OFF             |     light name
+ *  ALL_ON          |     null
+ *  ALL_OFF         |     null
+ *  AUDIO           |     null
+ *  SOLID           |     hex value
+ *  FADE            |     3 or 7
+ *  FLASH           |     3 or 7
+ *  SPEED           |     up or down
+ */
+
+const String   EVENT_ON        = "ON";
+const String   EVENT_OFF       = "OFF";
+const String   EVENT_ALL_ON    = "ALL_ON";
+const String   EVENT_ALL_OFF   = "ALL_OFF";
+const String   EVENT_AUDIO     = "AUDIO";
+const String   EVENT_SOLID     = "SOLID";
+const String   EVENT_FADE      = "FADE";
+const String   EVENT_FLASH     = "FLASH";
+const String   EVENT_SPEED     = "SPEED";
 
 /*============ Function Prototypes ===========*/
 

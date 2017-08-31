@@ -18,7 +18,7 @@ function closeNav() {
 }
 
 function showPage(pageName) {
-    console.log("INFO: current page: " + currentPage + ", new page" + pageName);
+    console.log("INFO: current page: " + currentPage + ", new page:" + pageName);
     document.getElementById(currentPage).style.display = 'none';
     document.getElementById(pageName).style.display = 'block';
     currentPage = pageName;
